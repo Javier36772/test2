@@ -1,11 +1,15 @@
 require('dotenv').config();
 require('./src/configs/db.config');
 const cors = require('cors');
-app.use(cors());
+
 
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT;
+
+app.use(cors({
+    origin: '*'
+  }));
 //controladores 
 const usuariosRouter = require('./src/routes/usuario.route');
 const regionRouter = require('./src/routes/Region.route')
