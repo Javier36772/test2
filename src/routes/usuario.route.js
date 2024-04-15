@@ -14,7 +14,7 @@ const accountLimiter = rateLimit({
 router.post('/usuarios', accountLimiter ,UsuarioController.createUsuario);
 
 // Ruta para obtener todos los usuarios
-router.get('/usuarios', validateToken ,accountLimiter, UsuarioController.getAllUsuarios);
+router.get('/usuarios' ,accountLimiter, UsuarioController.getAllUsuarios);
 
 // Ruta para obtener un usuario por su ID
 router.get('/usuarios/:id',validateToken, UsuarioController.getUsuarioById);
