@@ -7,7 +7,7 @@ const rateLimit = require("express-rate-limit");
 
 const accountLimiter = rateLimit({
     windowMs: 60 * 60 * 1000, // 1 hora
-    max: 2, 
+    max: 4, 
     message: "Demasiadas peticiones realizadas, intenta despues de 1 hora"
   });
 
